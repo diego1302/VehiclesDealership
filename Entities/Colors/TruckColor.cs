@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VehiclesDealership.Entities
+namespace VehiclesDealership.Entities.Colors
 {
-    internal class CarColors
+    internal class TruckColor
     {
         public int Id { get; set; }
-        protected string Name { get; set; }
+        public string Name { get; set; }
 
-        public CarColors(string name)
+        public TruckColor(string name)
         {
             Name = name;
         }
-
-
     }
 }

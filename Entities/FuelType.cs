@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace VehiclesDealership.Entities
 {
-    internal class TruckColors
+    internal class FuelType
     {
-        public int Id { get; set; }
-        protected string Name { get; set; }
+        public int ID { get; set; }
 
-        public TruckColors(string name)
+        public string FuelName { get; set; }
+
+        public FuelType(string fuelName)
         {
-            Name = name;
+            FuelName = fuelName;
         }
     }
 }
