@@ -22,12 +22,23 @@ namespace VehiclesDealership.Entities.TypeOfVehicle
         public List<CarMake> CarMakes { get; set; } = new();
         public List<CarColor> CarColors { get; set; } = new();
 
-        public Car(int doors , string carMake , string carColor , int modelYear, double price, int engineCapacity, int numberOfSeats) : base(modelYear, price, engineCapacity, numberOfSeats)
+        public Car(int doors , string carMake , string carColor , int modelYear, double price, int engineCapacity, int numberOfSeats, string typeOfFuel) : base(modelYear, price, engineCapacity, numberOfSeats, typeOfFuel)
         {
             CarMake = carMake;
             CarColor = carColor;
             Doors = doors;
 
+        }
+
+        public Car(Car car) : base(car.GetModelYear(), car.GetPrice(), car.GetEngineCapacity(), car.GetNumberofSeats(), car.GetTypeOfFuel())
+        {
+            Id = car.Id;
+            Doors = car.Doors;
+            CarMake = car.CarMake;
+            CarColor = car.CarColor;
+            CarMakes = car.CarMakes;
+            CarColors = car.CarColors;
+            
         }
 
 

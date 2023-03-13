@@ -9,6 +9,7 @@ using MySql.EntityFrameworkCore;
 using VehiclesDealership.Entities;
 using VehiclesDealership.Entities.Colors;
 using VehiclesDealership.Entities.Makers;
+using VehiclesDealership.Entities.TypeOfVehicle;
 
 namespace VehiclesDealership.DBcon
 {
@@ -23,6 +24,8 @@ namespace VehiclesDealership.DBcon
 
         #endregion
         public DbSet<FuelType> fuelTypes { get; set; }
+
+        public DbSet<Car> Cars{ get; set; }
 
         #region Car, Bike and Truck set up
         public DbSet<BikeMake> BikeMakes { get; set; }
